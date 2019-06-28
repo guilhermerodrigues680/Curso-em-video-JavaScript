@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: coral;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        // REFRESH Pagina
+        //window.setTimeout('window.location.href = window.document.URL', 3000)
+        // DOM = Document Object Model (Somente no navegador)
+        var corpo = window.document.body
+        // o window pode ser omitido: document.body....
+        var p1 = window.document.body.getElementsByTagName('p')[1]
+        var divMsg = document.getElementById('msg')
+        var d
+        //document.write('Conteudo: ' + p1.innerText )
+        p1.style.color = 'blue'
+        //corpo.style.background = 'teal'
+        //window.alert(p1.innerHTML)
+        
+        console.debug(divMsg.innerHTML)
+        divMsg.style.background = 'green'
+        divMsg.innerText = 'Estou aguardando...'
+
+        // Seleção por Seletor CSS (# = id ; . = class)
+        d = window.document.querySelector('div#msg')
+        console.debug(d)
+
+        // Reassitir Aula 01
+
+        /*
+        console.log(p1)
+        console.error('Erro')
+        console.warn('Alerta')
+        console.info('Informativo')
+        console.debug('Debug') */
+    </script>
+</body>
+</html>
