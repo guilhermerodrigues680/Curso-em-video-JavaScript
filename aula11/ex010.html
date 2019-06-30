@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Radar Online</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+            background: cornflowerblue;
+            color: white;
+        }
+        body input {
+            width: 100px;
+        }
+        div#res {
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Checar Multa</h1>
+    Velocidade: &nbsp;
+    <input type="number" name="txtvel" id="txtvel">
+    <!-- <input type="button" value="Checar" onclick="checar()"> -->
+    <input type="button" value="Checar" id="btnChecar">
+    <div id="res">
+        Resposta?
+    </div>
+
+    <!-- JS Script -->
+    <script>
+        // Adicionando evento de click
+        document.getElementById('btnChecar').addEventListener('click',checar)
+        
+        // Funcao para checar a velocidade
+        function checar() {
+            //var tvel = document.getElementById('txtvel').value
+            var tvel = document.querySelector('input#txtvel').value
+            var vel = Number(tvel)
+            var div = document.getElementById('res')
+            if (vel > 60) {
+                //div.innerText = 'Você foi multado!'
+                div.innerHTML = `<p>Sua velocidade foi ${vel}km/h, <strong>voce foi multado!</strong></p>`
+            } else {
+                div.innerHTML = `<p>Sua velocidade foi ${vel}km/h, <strong>você não foi multado :)</strong></p>`
+            }
+
+            div.innerHTML += '<p>Dirija sempre com cinto de segurança</p>'
+        }
+    </script>
+</body>
+</html>
