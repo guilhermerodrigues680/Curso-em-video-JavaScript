@@ -15,6 +15,30 @@ section {
     width: 500px;
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    line-height: 50px;
+    text-align: center;
+}
+
+select#tabuada {
+    /* background: #eee; /* Simular campo inativo */
+    /* pointer-events: none; */
+    /* touch-action: none; */
+    min-height: 200px;
+    border: solid 2px;
+    /* margin: auto; */
+    /* display: block; */
+    text-align: center;
+}
+
+#tabuada option {
+    padding-left: 50px;
+    text-align: left;
+    padding-right: 50px;
+}
+
+input[type="number"] {
+    width: 80px;
+    letter-spacing: 2pt;
 }
 
 footer {
